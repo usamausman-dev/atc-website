@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usama Usman</title>
+
+    <!-- OWL carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- google font  -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Kaushan+Script&display=swap"
+        rel="stylesheet" />
+
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ion-icon -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+    <!-- alpinejs -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <style type="text/tailwindcss">
+        body {
+        font-family: "Inter", sans-serif;
+      }
+
+    </style>
+</head>
+
+<body>
+    <!-- ==== Header ==== -->
+    <header x-data="{navbarOpen:false}"
+        class="absolute sticky drop-shadow-lg left-0 top-0 z-50 bg-white/90 w-full backdrop-blur">
+        <div class="mx-auto h-[90px] max-w-7xl px-8 md:px-6">
+            <div class="relative flex h-full items-center justify-between border-b border-slate-500/10">
+                <!-- logo -->
+                <div class="max-w-full w-[15rem]">
+                    <a href="#">
+                        <span class="logo-font text-xl">LOGO;</span>
+                    </a>
+                </div>
+                <!-- END logo -->
+
+                <!-- menu  -->
+                <div class="flex w-full items-center justify-end">
+                    <nav x-transition :class="!navbarOpen && 'hidden'" id="navbarCollapse"
+                        class="absolute right-0 top-[90px] w-full max-w-[350px] rounded-lg border border-black-200 bg-white py-5 px-6 shadow-lg shadow-black-400/5 transition-all lg:static lg:block lg:max-w-full lg:border-none lg:shadow-none lg:bg-transparent lg:px-0 lg-py-0">
+                        <ul class="flex flex-col justify-end gap-8 lg:flex-row">
+                            <li>
+                                <a href="#"
+                                    class="text-lg font-medium text-slate-700 duration-200 hover:font-bold lg:text-base">Home
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#"
+                                    class="text-lg font-medium text-slate-700 duration-200 hover:font-bold lg:text-base">About
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#"
+                                    class="text-lg font-medium text-slate-700 duration-200 hover:font-bold lg:text-base">Services
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#"
+                                    class="text-lg font-medium text-slate-700 duration-200 hover:font-bold lg:text-base">Tools
+                                    & Techs.
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#"
+                                    class="text-lg font-medium text-slate-700 duration-200 hover:font-bold lg:text-base">Portfolio
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- END menu  -->
+
+                <!-- Menu Btn  -->
+                <div class="flex">
+
+                    <button @click="navbarOpen = !navbarOpen" :class="navbarOpen && 'navbarTogglerActive'"
+                        id="navbarToggler" class="block lg:hidden">
+                        <ion-icon class="text-4xl text-slate-500" name="menu-outline"></ion-icon>
+                    </button>
+                </div>
+                <!-- END Menu Btn  -->
+            </div>
+        </div>
+    </header>
+    <!-- ==== END Header ==== -->
+
+    <!-- ==== Hero ==== -->
+    <section class="relative bg-white">
+        <div
+            class="bg-[url('https://zameenblog.s3.amazonaws.com/blog/wp-content/uploads/2021/02/cover1.jpg')] bg-cover h-[100vh] ">
+            <div class="flex flex-wrap items-center bg-slate-700 bg-opacity-25 h-full  ">
+                <div class="w-full p-20">
+                    <h1
+                        class="text-slate-50 mt-9 mb-3 text-4xl leading-snug sm:text-[42px] lg:text-[50px] xl:text-[42px]">
+                        Welcome to
+                        <span class="text-slate-100 font-bold">
+                            Attock Chachi Ittehad
+                        </span>
+                    </h1>
+
+                    <p class="text-slate-50 mb-8 max-w-[480px] text-base">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Doloremque fugit, officia cum animi modi quae culpa atque officiis
+                        eligendi consectetur ratione magnam est neque, amet odio eum
+                        molestias, autem eius!
+                    </p>
+                    <button
+                        class="w-full rounded-md bg-slate-50 px-8 py-2.5 font-semibold text-slate shadow-md hover:shadow-slate-50/20 duration-200 sm:w-auto">
+                        Register
+                    </button>
+                    20
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ==== END Hero ==== -->
+
+    <!-- ABOUT  -->
+    <section class="py-20 ">
+        <div class="mx-auto max-w-7xl px-8 md:px-6">
+            <div class="mb-5 sm:mb-10">
+                <span class="font-medium text-slate-900"><img src="./images/arrow.svg" class="h-[50px] m-4" alt=""
+                        srcset=""></span>
+                <h1 class="text-2xl font-bold text-slate-800 sm:text-3xl">
+                    Get to Know About Us
+                </h1>
+            </div>
+
+
+            <!-- about img  -->
+            <div class="md:flex md:justify-between md:gap-6 xl:gap-10">
+
+                <div class="md:w-6/12 py-16">
+                    <p class="mt-5">
+                        <span class="font-bold">Attock</span>, that was formerly known as Campbellpur, is a historical
+                        city located in the north of
+                        Pakistan's Punjab Province, not far from the country's capital Islamabad. It is the headquarters
+                        of the Attock District and is 61st largest city of Pakistan by population. The city was founded
+                        in 1908 several miles southeast of the older city of Attock Khurd, which had been established by
+                        the Mughal Emperor Akbar in the 16th century,and was initially named in honour of Sir Colin
+                        Campbell.
+                    </p>
+
+                    <p class="mt-5">
+                        <span class="font-bold">Attock Chachi Ittehad</span> is the representative organization of
+                        Attock, representing globally to help out the people and make the people of Attock closer to
+                        eachother, so that they can grow in every single aspect of life.
+                    </p>
+
+                </div>
+
+
+                <div class="mb-6 max-h-[600px] overflow-hidden rounded-lg md:mb-0 md:w-6/12 sm:py-10">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53063.85849855693!2d72.37038519999999!3d33.77381265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df1833bc83b8c5%3A0xb1f5e618ca04b0b3!2sAttock%2C%20Punjab!5e0!3m2!1sen!2s!4v1669182605736!5m2!1sen!2s"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+    <!-- End ABOUT  -->
+
+
+    <section class="py-36 bg-slate-50">
+        <div class="mx-auto max-w-7xl px-8 md:px-6">
+            <div class="text-center mb-16">
+                <!-- <span class="font-medium text-slate-900"><img src="./images/arrow.svg" class="h-[50px] mx-auto" alt=""
+                        srcset=""></span> -->
+
+
+                <h1 class="text-2xl font-bold text-slate-800 sm:text-3xl">
+                    Meet Our General Body
+                </h1>
+                <p class="mx-auto max-w-2 mt-2 text-slate-600">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reprehenderit molestias a, tenetur eos beatae est assumenda ducimus
+                    facilis hic odio nostrum voluptate architecto voluptatibus enim
+                    autem error facere minima quas!
+                </p>
+            </div>
+
+
+
+            <div>
+                <div class="owl-carousel owl-theme grid gap-6 sm:grid-cols-2 md:grid-cols-4 xl:gap-8">
+                    <div class="item">
+                        <div
+                            class="group flex cursor-pointer flex-col items-center rounded-xl border border-slate-50/10 bg-white px-5 py-8 shadow-lg shadow-slate-300/10 duration-200">
+                            <img src="https://i1.rgstatic.net/ii/profile.image/693632650735616-1542386319284_Q512/Muhammad-Usama-Usman.jpg"
+                                class="w-24 rounded-full" />
+
+                            <h4 class="mt-3 mb-1 text-[17px] font-semibold text-slate-700 duration-200">
+                                Lala Ishaq Khan
+                            </h4>
+                            <p class="text-center text-sm text-slate-500 duration-200">
+                                Chairman
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div
+                            class="group flex cursor-pointer flex-col items-center rounded-xl border border-slate-50/10 bg-white px-5 py-8 shadow-lg shadow-slate-300/10 duration-200">
+                            <img src="https://i1.rgstatic.net/ii/profile.image/693632650735616-1542386319284_Q512/Muhammad-Usama-Usman.jpg"
+                                class="w-24 rounded-full" />
+
+                            <h4 class="mt-3 mb-1 text-[17px] font-semibold text-slate-700 duration-200">
+                                Lala Ishaq Khan
+                            </h4>
+                            <p class="text-center text-sm text-slate-500 duration-200">
+                                Chairman
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div
+                            class="group flex cursor-pointer flex-col items-center rounded-xl border border-slate-50/10 bg-white px-5 py-8 shadow-lg shadow-slate-300/10 duration-200">
+                            <img src="https://i1.rgstatic.net/ii/profile.image/693632650735616-1542386319284_Q512/Muhammad-Usama-Usman.jpg"
+                                class="w-24 rounded-full" />
+
+                            <h4 class="mt-3 mb-1 text-[17px] font-semibold text-slate-700 duration-200">
+                                Lala Ishaq Khan
+                            </h4>
+                            <p class="text-center text-sm text-slate-500 duration-200">
+                                Chairman
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div
+                            class="group flex cursor-pointer flex-col items-center rounded-xl border border-slate-50/10 bg-white px-5 py-8 shadow-lg shadow-slate-300/10 duration-200">
+                            <img src="https://i1.rgstatic.net/ii/profile.image/693632650735616-1542386319284_Q512/Muhammad-Usama-Usman.jpg"
+                                class="w-24 rounded-full" />
+
+                            <h4 class="mt-3 mb-1 text-[17px] font-semibold text-slate-700 duration-200">
+                                Lala Ishaq Khan
+                            </h4>
+                            <p class="text-center text-sm text-slate-500 duration-200">
+                                Chairman
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div
+                            class="group flex cursor-pointer flex-col items-center rounded-xl border border-slate-50/10 bg-white px-5 py-8 shadow-lg shadow-slate-300/10 duration-200">
+                            <img src="https://i1.rgstatic.net/ii/profile.image/693632650735616-1542386319284_Q512/Muhammad-Usama-Usman.jpg"
+                                class="w-24 rounded-full" />
+
+                            <h4 class="mt-3 mb-1 text-[17px] font-semibold text-slate-700 duration-200">
+                                Lala Ishaq Khan
+                            </h4>
+                            <p class="text-center text-sm text-slate-500 duration-200">
+                                Chairman
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div
+                            class="group flex cursor-pointer flex-col items-center rounded-xl border border-slate-50/10 bg-white px-5 py-8 shadow-lg shadow-slate-300/10 duration-200">
+                            <img src="https://i1.rgstatic.net/ii/profile.image/693632650735616-1542386319284_Q512/Muhammad-Usama-Usman.jpg"
+                                class="w-24 rounded-full" />
+
+                            <h4 class="mt-3 mb-1 text-[17px] font-semibold text-slate-700 duration-200">
+                                Lala Ishaq Khan
+                            </h4>
+                            <p class="text-center text-sm text-slate-500 duration-200">
+                                Chairman
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- image gallery -->
+    <section class="py-36 ">
+        <div class="mx-auto max-w-7xl px-8 md:px-6">
+            <div class="text-center mb-16">
+
+                <h1 class="text-2xl font-bold text-slate-800 sm:text-3xl">
+                    Our Recent Events
+                </h1>
+                <p class="mx-auto max-w-2 mt-2 text-slate-600">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reprehenderit molestias a, tenetur eos beatae est assumenda ducimus
+                    facilis hic odio nostrum voluptate architecto voluptatibus enim
+                    autem error facere minima quas!
+                </p>
+            </div>
+
+            <div class="container mx-auto">
+                <div class="grid-cols-3 p-20 space-y-2 lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-3">
+                    <div class="w-full rounded-lg hover:shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                            alt="image">
+                    </div>
+
+
+                    <div class="w-full col-span-2 row-span-2 rounded-lg hover:shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                            alt="image">
+                    </div>
+                    <div class="w-full rounded-lg hover:shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                            alt="image">
+                    </div>
+                    <div class="w-full col-span-2 row-span-2 rounded-lg hover:shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                            alt="image">
+                    </div>
+
+                    <div class="w-full rounded-lg hover:shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                            alt="image">
+                    </div>
+
+
+
+                    <div class="w-full rounded-lg hover:shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                            alt="image">
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </section>
+
+
+
+    <!-- ADDRESS  -->
+    <section class="py-20 ">
+        <div class="mx-auto max-w-7xl px-8 md:px-6">
+            <div class="mb-5 sm:mb-10">
+                <span class="font-medium text-slate-900"><img src="./images/arrow.svg" class="h-[50px] m-4" alt=""
+                        srcset=""></span>
+                <h1 class="text-2xl font-bold text-slate-800 sm:text-3xl">
+                    You can Meet with Us
+                </h1>
+            </div>
+
+
+            <!-- about img  -->
+            <div class="md:flex md:justify-between md:gap-6 xl:gap-10">
+
+                <div class="md:w-6/12 py-10">
+                    <div class="mb-16 flex flex-col">
+                        <div
+                            class="mb-8 flex w-full items-center rounded-lg bg-slate-50 p-4 shadow-md shadow-slate-500/10">
+                            <div
+                                class="mr-6 flex h-[60px] w-full items-center justify-center overflow-hidden rounded bg-slate-500 bg-opacity-5 text-slate-500 sm:h-[70px] sm:max-w-[70px]">
+                                <ion-icon name="call-outline" class="text-3xl"></ion-icon>
+                            </div>
+                            <div class="w-full">
+                                <h4 class="mb-1 text-xl font-bold text-slate-700">
+                                    Contact
+                                </h4>
+                                <p class="text-base text-slate-400">
+                                    +92 333 2208997
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="mb-8 flex w-full items-center rounded-lg bg-slate-50 p-4 shadow-md shadow-slate-500/10">
+                            <div
+                                class="mr-6 flex h-[60px] w-full items-center justify-center overflow-hidden rounded bg-slate-500 bg-opacity-5 text-slate-500 sm:h-[70px] sm:max-w-[70px]">
+                                <ion-icon name="mail-outline" class="text-3xl"></ion-icon>
+                            </div>
+                            <div class="w-full">
+                                <h4 class="mb-1 text-xl font-bold text-slate-700">
+                                    Email
+                                </h4>
+                                <p class="text-base text-slate-400">
+                                    Attockchachiittehad@gmail.com
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="mb-8 flex w-full items-center rounded-lg bg-slate-50 p-4 shadow-md shadow-slate-500/10">
+                            <div
+                                class="mr-6 flex h-[60px] w-full items-center justify-center overflow-hidden rounded bg-slate-500 bg-opacity-5 text-slate-500 sm:h-[70px] sm:max-w-[70px]">
+                                <ion-icon name="location-outline" class="text-3xl"></ion-icon>
+                            </div>
+                            <div class="w-full">
+                                <h4 class="mb-1 text-xl font-bold text-slate-700">
+                                    Address
+                                </h4>
+                                <p class="text-base text-slate-400">
+                                    Bakra Piri, Lyari, Karachi
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mb-6 max-h-[600px] overflow-hidden rounded-lg md:mb-0 md:w-6/12">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d904.8879147810038!2d67.00389093261181!3d24.87915779960573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f5e2b7db45d%3A0xb10fe8f85d10f74b!2sBakra%20piri!5e0!3m2!1sen!2s!4v1669186983544!5m2!1sen!2s"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End ADDRESS  -->
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 - Attock Chachi Ittehad</a>. All
+            Rights Reserved.
+        </span>
+        <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+            <li>
+                <a href="https://github.com/usamausman-dev" class="mr-4 hover:underline md:mr-6 ">Developed By Usama
+                    Usman</a>
+            </li>
+        </ul>
+    </footer>
+
+
+    <!-- jquery CDN  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- OwlCarousel2 CDN  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            autoplay: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
